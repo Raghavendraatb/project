@@ -8,7 +8,10 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Income from './Components/Income/Income'
 import Expenses from './Components/Expenses/Expenses';
 import { useGlobalContext } from './context/globalContext';
-
+import History from './History/History';
+import LoginForm from './Components/login';
+import SignupForm from './Components/signup';
+import PieChart from './Components/PieChart/PieChart';
 function App() {
   const [active, setActive] = useState(1)
 
@@ -20,11 +23,13 @@ function App() {
       case 1:
         return <Dashboard />
       case 2:
-        return <Dashboard />
+        return <History />
       case 3:
         return <Income />
       case 4: 
         return <Expenses />
+        case 5: 
+        return <PieChart />
       default: 
         return <Dashboard />
     }
